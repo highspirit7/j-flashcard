@@ -1,113 +1,113 @@
 ---
 name: Komorebi Design System
 colors:
-  surface: '#f8f9ff'
-  surface-dim: '#cbdbf5'
-  surface-bright: '#f8f9ff'
-  surface-container-lowest: '#ffffff'
-  surface-container-low: '#eff4ff'
-  surface-container: '#e5eeff'
-  surface-container-high: '#dce9ff'
-  surface-container-highest: '#d3e4fe'
-  on-surface: '#0b1c30'
-  on-surface-variant: '#3c4a42'
-  inverse-surface: '#213145'
-  inverse-on-surface: '#eaf1ff'
-  outline: '#6c7a71'
-  outline-variant: '#bbcabf'
-  surface-tint: '#006c49'
-  primary: '#006c49'
-  on-primary: '#ffffff'
-  primary-container: '#10b981'
-  on-primary-container: '#00422b'
-  inverse-primary: '#4edea3'
-  secondary: '#1b6b51'
-  on-secondary: '#ffffff'
-  secondary-container: '#a6f2d1'
-  on-secondary-container: '#237157'
-  tertiary: '#55615a'
-  on-tertiary: '#ffffff'
-  tertiary-container: '#99a69e'
-  on-tertiary-container: '#303c36'
-  error: '#ba1a1a'
-  on-error: '#ffffff'
-  error-container: '#ffdad6'
-  on-error-container: '#93000a'
-  primary-fixed: '#6ffbbe'
-  primary-fixed-dim: '#4edea3'
-  on-primary-fixed: '#002113'
-  on-primary-fixed-variant: '#005236'
-  secondary-fixed: '#a6f2d1'
-  secondary-fixed-dim: '#8bd6b6'
-  on-secondary-fixed: '#002116'
-  on-secondary-fixed-variant: '#00513b'
-  tertiary-fixed: '#d9e6dd'
-  tertiary-fixed-dim: '#bdcac1'
-  on-tertiary-fixed: '#131e19'
-  on-tertiary-fixed-variant: '#3e4943'
-  background: '#f8f9ff'
-  on-background: '#0b1c30'
-  surface-variant: '#d3e4fe'
-  surface-paper: '#FFFFFF'
-  surface-muted: '#F8FAFC'
-  rating-again: '#EF4444'
-  rating-hard: '#F59E0B'
-  rating-good: '#3B82F6'
-  rating-easy: '#10B981'
-  kanji-stroke: '#1E293B'
+  surface: "#f8f9ff"
+  surface-dim: "#cbdbf5"
+  surface-bright: "#f8f9ff"
+  surface-container-lowest: "#ffffff"
+  surface-container-low: "#eff4ff"
+  surface-container: "#e5eeff"
+  surface-container-high: "#dce9ff"
+  surface-container-highest: "#d3e4fe"
+  on-surface: "#0b1c30"
+  on-surface-variant: "#3c4a42"
+  inverse-surface: "#213145"
+  inverse-on-surface: "#eaf1ff"
+  outline: "#6c7a71"
+  outline-variant: "#bbcabf"
+  surface-tint: "#006c49"
+  primary: "#006c49"
+  on-primary: "#ffffff"
+  primary-container: "#10b981"
+  on-primary-container: "#00422b"
+  inverse-primary: "#4edea3"
+  secondary: "#1b6b51"
+  on-secondary: "#ffffff"
+  secondary-container: "#a6f2d1"
+  on-secondary-container: "#237157"
+  tertiary: "#55615a"
+  on-tertiary: "#ffffff"
+  tertiary-container: "#99a69e"
+  on-tertiary-container: "#303c36"
+  error: "#ba1a1a"
+  on-error: "#ffffff"
+  error-container: "#ffdad6"
+  on-error-container: "#93000a"
+  primary-fixed: "#6ffbbe"
+  primary-fixed-dim: "#4edea3"
+  on-primary-fixed: "#002113"
+  on-primary-fixed-variant: "#005236"
+  secondary-fixed: "#a6f2d1"
+  secondary-fixed-dim: "#8bd6b6"
+  on-secondary-fixed: "#002116"
+  on-secondary-fixed-variant: "#00513b"
+  tertiary-fixed: "#d9e6dd"
+  tertiary-fixed-dim: "#bdcac1"
+  on-tertiary-fixed: "#131e19"
+  on-tertiary-fixed-variant: "#3e4943"
+  background: "#f8f9ff"
+  on-background: "#0b1c30"
+  surface-variant: "#d3e4fe"
+  surface-paper: "#FFFFFF"
+  surface-muted: "#F8FAFC"
+  rating-again: "#EF4444"
+  rating-hard: "#F59E0B"
+  rating-good: "#3B82F6"
+  rating-easy: "#10B981"
+  kanji-stroke: "#1E293B"
 typography:
   display-kanji:
     fontFamily: Plus Jakarta Sans
     fontSize: 48px
-    fontWeight: '700'
-    lineHeight: '1.2'
+    fontWeight: "700"
+    lineHeight: "1.2"
     letterSpacing: -0.02em
   display-kanji-mobile:
     fontFamily: Plus Jakarta Sans
     fontSize: 36px
-    fontWeight: '700'
-    lineHeight: '1.2'
+    fontWeight: "700"
+    lineHeight: "1.2"
   headline-lg:
     fontFamily: Plus Jakarta Sans
     fontSize: 24px
-    fontWeight: '600'
+    fontWeight: "600"
     lineHeight: 32px
   headline-md:
     fontFamily: Plus Jakarta Sans
     fontSize: 20px
-    fontWeight: '600'
+    fontWeight: "600"
     lineHeight: 28px
   body-lg:
     fontFamily: Inter
     fontSize: 18px
-    fontWeight: '400'
+    fontWeight: "400"
     lineHeight: 28px
   body-md:
     fontFamily: Inter
     fontSize: 16px
-    fontWeight: '400'
+    fontWeight: "400"
     lineHeight: 24px
   body-sm:
     fontFamily: Inter
     fontSize: 14px
-    fontWeight: '400'
+    fontWeight: "400"
     lineHeight: 20px
   furigana:
     fontFamily: Inter
     fontSize: 12px
-    fontWeight: '500'
+    fontWeight: "500"
     lineHeight: 14px
     letterSpacing: 0.05em
   label-caps:
     fontFamily: JetBrains Mono
     fontSize: 12px
-    fontWeight: '600'
+    fontWeight: "600"
     lineHeight: 16px
     letterSpacing: 0.05em
   rating-unit:
     fontFamily: JetBrains Mono
     fontSize: 11px
-    fontWeight: '500'
+    fontWeight: "500"
     lineHeight: 12px
 rounded:
   sm: 0.25rem

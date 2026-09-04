@@ -147,7 +147,7 @@ The palette is anchored by **Emerald Green**, chosen for its association with gr
 
 ### Key Color Applications
 
-- **Primary (#10B981):** Used for primary actions, progress bars, and the "Easy" rating. It signifies success and momentum.
+- **Primary (#006c49):** Used for primary actions, progress bars, and the "Easy" rating. It signifies success and momentum.
 - **Surface Layering:** We use a "Paper" strategy. The main background is a very light gray (`surface-muted`), while active cards and containers use pure white (`surface-paper`) to pop forward.
 - **Semantic Ratings:**
   - **Again:** Vibrant Red for immediate attention.

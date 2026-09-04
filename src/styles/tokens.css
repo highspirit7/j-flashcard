@@ -1,0 +1,214 @@
+:root {
+  --komorebi-color-surface: #f8f9ff;
+  --komorebi-color-surface-dim: #cbdbf5;
+  --komorebi-color-surface-bright: #f8f9ff;
+  --komorebi-color-surface-container-lowest: #ffffff;
+  --komorebi-color-surface-container-low: #eff4ff;
+  --komorebi-color-surface-container: #e5eeff;
+  --komorebi-color-surface-container-high: #dce9ff;
+  --komorebi-color-surface-container-highest: #d3e4fe;
+  --komorebi-color-on-surface: #0b1c30;
+  --komorebi-color-on-surface-variant: #3c4a42;
+  --komorebi-color-inverse-surface: #213145;
+  --komorebi-color-inverse-on-surface: #eaf1ff;
+  --komorebi-color-outline: #6c7a71;
+  --komorebi-color-outline-variant: #bbcabf;
+  --komorebi-color-surface-tint: #006c49;
+  --komorebi-color-primary: #006c49;
+  --komorebi-color-on-primary: #ffffff;
+  --komorebi-color-primary-container: #10b981;
+  --komorebi-color-on-primary-container: #00422b;
+  --komorebi-color-inverse-primary: #4edea3;
+  --komorebi-color-secondary: #1b6b51;
+  --komorebi-color-on-secondary: #ffffff;
+  --komorebi-color-secondary-container: #a6f2d1;
+  --komorebi-color-on-secondary-container: #237157;
+  --komorebi-color-tertiary: #55615a;
+  --komorebi-color-on-tertiary: #ffffff;
+  --komorebi-color-tertiary-container: #99a69e;
+  --komorebi-color-on-tertiary-container: #303c36;
+  --komorebi-color-error: #ba1a1a;
+  --komorebi-color-on-error: #ffffff;
+  --komorebi-color-error-container: #ffdad6;
+  --komorebi-color-on-error-container: #93000a;
+  --komorebi-color-primary-fixed: #6ffbbe;
+  --komorebi-color-primary-fixed-dim: #4edea3;
+  --komorebi-color-on-primary-fixed: #002113;
+  --komorebi-color-on-primary-fixed-variant: #005236;
+  --komorebi-color-secondary-fixed: #a6f2d1;
+  --komorebi-color-secondary-fixed-dim: #8bd6b6;
+  --komorebi-color-on-secondary-fixed: #002116;
+  --komorebi-color-on-secondary-fixed-variant: #00513b;
+  --komorebi-color-tertiary-fixed: #d9e6dd;
+  --komorebi-color-tertiary-fixed-dim: #bdcac1;
+  --komorebi-color-on-tertiary-fixed: #131e19;
+  --komorebi-color-on-tertiary-fixed-variant: #3e4943;
+  --komorebi-color-background: #f8f9ff;
+  --komorebi-color-on-background: #0b1c30;
+  --komorebi-color-surface-variant: #d3e4fe;
+  --komorebi-color-surface-paper: #ffffff;
+  --komorebi-color-surface-muted: #f8fafc;
+  --komorebi-color-rating-again: #ef4444;
+  --komorebi-color-rating-hard: #f59e0b;
+  --komorebi-color-rating-good: #3b82f6;
+  --komorebi-color-rating-easy: #10b981;
+  --komorebi-color-kanji-stroke: #1e293b;
+
+  --komorebi-font-display-kanji:
+    "Plus Jakarta Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,
+    sans-serif;
+  --komorebi-font-display-kanji-size: 48px;
+  --komorebi-font-display-kanji-weight: 700;
+  --komorebi-font-display-kanji-line-height: 1.2;
+  --komorebi-font-display-kanji-letter-spacing: -0.02em;
+  --komorebi-font-display-kanji-mobile-size: 36px;
+  --komorebi-font-headline:
+    "Plus Jakarta Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,
+    sans-serif;
+  --komorebi-font-headline-lg-size: 24px;
+  --komorebi-font-headline-lg-weight: 600;
+  --komorebi-font-headline-lg-line-height: 32px;
+  --komorebi-font-headline-md-size: 20px;
+  --komorebi-font-headline-md-weight: 600;
+  --komorebi-font-headline-md-line-height: 28px;
+  --komorebi-font-body:
+    Inter, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  --komorebi-font-body-lg-size: 18px;
+  --komorebi-font-body-lg-weight: 400;
+  --komorebi-font-body-lg-line-height: 28px;
+  --komorebi-font-body-md-size: 16px;
+  --komorebi-font-body-md-weight: 400;
+  --komorebi-font-body-md-line-height: 24px;
+  --komorebi-font-body-sm-size: 14px;
+  --komorebi-font-body-sm-weight: 400;
+  --komorebi-font-body-sm-line-height: 20px;
+  --komorebi-font-furigana:
+    Inter, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  --komorebi-font-furigana-size: 12px;
+  --komorebi-font-furigana-weight: 500;
+  --komorebi-font-furigana-line-height: 14px;
+  --komorebi-font-furigana-letter-spacing: 0.05em;
+  --komorebi-font-label-caps:
+    "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --komorebi-font-label-caps-size: 12px;
+  --komorebi-font-label-caps-weight: 600;
+  --komorebi-font-label-caps-line-height: 16px;
+  --komorebi-font-label-caps-letter-spacing: 0.05em;
+  --komorebi-font-rating-unit:
+    "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --komorebi-font-rating-unit-size: 11px;
+  --komorebi-font-rating-unit-weight: 500;
+  --komorebi-font-rating-unit-line-height: 12px;
+
+  --komorebi-radius-sm: 0.25rem;
+  --komorebi-radius-default: 0.5rem;
+  --komorebi-radius-md: 0.75rem;
+  --komorebi-radius-lg: 1rem;
+  --komorebi-radius-xl: 1.5rem;
+  --komorebi-radius-full: 9999px;
+
+  --komorebi-spacing-container-margin: 1rem;
+  --komorebi-spacing-gutter: 1rem;
+  --komorebi-spacing-card-padding: 1.5rem;
+  --komorebi-spacing-stack-sm: 0.5rem;
+  --komorebi-spacing-stack-md: 1rem;
+  --komorebi-spacing-stack-lg: 2rem;
+}
+
+@theme inline {
+  --color-surface: var(--komorebi-color-surface);
+  --color-surface-dim: var(--komorebi-color-surface-dim);
+  --color-surface-bright: var(--komorebi-color-surface-bright);
+  --color-surface-container-lowest: var(
+    --komorebi-color-surface-container-lowest
+  );
+  --color-surface-container-low: var(--komorebi-color-surface-container-low);
+  --color-surface-container: var(--komorebi-color-surface-container);
+  --color-surface-container-high: var(--komorebi-color-surface-container-high);
+  --color-surface-container-highest: var(
+    --komorebi-color-surface-container-highest
+  );
+  --color-on-surface: var(--komorebi-color-on-surface);
+  --color-on-surface-variant: var(--komorebi-color-on-surface-variant);
+  --color-inverse-surface: var(--komorebi-color-inverse-surface);
+  --color-inverse-on-surface: var(--komorebi-color-inverse-on-surface);
+  --color-outline: var(--komorebi-color-outline);
+  --color-outline-variant: var(--komorebi-color-outline-variant);
+  --color-surface-tint: var(--komorebi-color-surface-tint);
+  --color-primary: var(--komorebi-color-primary);
+  --color-on-primary: var(--komorebi-color-on-primary);
+  --color-primary-container: var(--komorebi-color-primary-container);
+  --color-on-primary-container: var(--komorebi-color-on-primary-container);
+  --color-inverse-primary: var(--komorebi-color-inverse-primary);
+  --color-secondary: var(--komorebi-color-secondary);
+  --color-on-secondary: var(--komorebi-color-on-secondary);
+  --color-secondary-container: var(--komorebi-color-secondary-container);
+  --color-on-secondary-container: var(--komorebi-color-on-secondary-container);
+  --color-tertiary: var(--komorebi-color-tertiary);
+  --color-on-tertiary: var(--komorebi-color-on-tertiary);
+  --color-tertiary-container: var(--komorebi-color-tertiary-container);
+  --color-on-tertiary-container: var(--komorebi-color-on-tertiary-container);
+  --color-error: var(--komorebi-color-error);
+  --color-on-error: var(--komorebi-color-on-error);
+  --color-error-container: var(--komorebi-color-error-container);
+  --color-on-error-container: var(--komorebi-color-on-error-container);
+  --color-primary-fixed: var(--komorebi-color-primary-fixed);
+  --color-primary-fixed-dim: var(--komorebi-color-primary-fixed-dim);
+  --color-on-primary-fixed: var(--komorebi-color-on-primary-fixed);
+  --color-on-primary-fixed-variant: var(
+    --komorebi-color-on-primary-fixed-variant
+  );
+  --color-secondary-fixed: var(--komorebi-color-secondary-fixed);
+  --color-secondary-fixed-dim: var(--komorebi-color-secondary-fixed-dim);
+  --color-on-secondary-fixed: var(--komorebi-color-on-secondary-fixed);
+  --color-on-secondary-fixed-variant: var(
+    --komorebi-color-on-secondary-fixed-variant
+  );
+  --color-tertiary-fixed: var(--komorebi-color-tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--komorebi-color-tertiary-fixed-dim);
+  --color-on-tertiary-fixed: var(--komorebi-color-on-tertiary-fixed);
+  --color-on-tertiary-fixed-variant: var(
+    --komorebi-color-on-tertiary-fixed-variant
+  );
+  --color-background: var(--komorebi-color-background);
+  --color-on-background: var(--komorebi-color-on-background);
+  --color-surface-variant: var(--komorebi-color-surface-variant);
+  --color-surface-paper: var(--komorebi-color-surface-paper);
+  --color-surface-muted: var(--komorebi-color-surface-muted);
+  --color-rating-again: var(--komorebi-color-rating-again);
+  --color-rating-hard: var(--komorebi-color-rating-hard);
+  --color-rating-good: var(--komorebi-color-rating-good);
+  --color-rating-easy: var(--komorebi-color-rating-easy);
+  --color-kanji-stroke: var(--komorebi-color-kanji-stroke);
+
+  --font-display-kanji: var(--komorebi-font-display-kanji);
+  --font-headline: var(--komorebi-font-headline);
+  --font-body: var(--komorebi-font-body);
+  --font-furigana: var(--komorebi-font-furigana);
+  --font-label-caps: var(--komorebi-font-label-caps);
+  --font-rating-unit: var(--komorebi-font-rating-unit);
+
+  --text-display-kanji: var(--komorebi-font-display-kanji-size);
+  --text-headline-lg: var(--komorebi-font-headline-lg-size);
+  --text-headline-md: var(--komorebi-font-headline-md-size);
+  --text-body-lg: var(--komorebi-font-body-lg-size);
+  --text-body-md: var(--komorebi-font-body-md-size);
+  --text-body-sm: var(--komorebi-font-body-sm-size);
+  --text-furigana: var(--komorebi-font-furigana-size);
+  --text-label-caps: var(--komorebi-font-label-caps-size);
+  --text-rating-unit: var(--komorebi-font-rating-unit-size);
+
+  --radius-sm: var(--komorebi-radius-sm);
+  --radius-default: var(--komorebi-radius-default);
+  --radius-md: var(--komorebi-radius-md);
+  --radius-lg: var(--komorebi-radius-lg);
+  --radius-xl: var(--komorebi-radius-xl);
+  --radius-full: var(--komorebi-radius-full);
+
+  --spacing-container-margin: var(--komorebi-spacing-container-margin);
+  --spacing-gutter: var(--komorebi-spacing-gutter);
+  --spacing-card-padding: var(--komorebi-spacing-card-padding);
+  --spacing-stack-sm: var(--komorebi-spacing-stack-sm);
+  --spacing-stack-md: var(--komorebi-spacing-stack-md);
+  --spacing-stack-lg: var(--komorebi-spacing-stack-lg);
+}

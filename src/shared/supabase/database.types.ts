@@ -77,15 +77,15 @@ export type Database = {
           created_at: string
           deck_id: string
           difficulty: number
-          due_date: string
+          due: string
           id: string
-          interval: number
           lapses: number
-          last_reviewed_at: string | null
+          last_review: string | null
           meaning: string
           part_of_speech: string
           reading: string | null
-          repetitions: number
+          reps: number
+          scheduled_days: number
           stability: number
           state: Database["public"]["Enums"]["card_state"]
           updated_at: string
@@ -95,15 +95,15 @@ export type Database = {
           created_at?: string
           deck_id: string
           difficulty?: number
-          due_date?: string
+          due?: string
           id?: string
-          interval?: number
           lapses?: number
-          last_reviewed_at?: string | null
+          last_review?: string | null
           meaning: string
           part_of_speech: string
           reading?: string | null
-          repetitions?: number
+          reps?: number
+          scheduled_days?: number
           stability?: number
           state?: Database["public"]["Enums"]["card_state"]
           updated_at?: string
@@ -113,15 +113,15 @@ export type Database = {
           created_at?: string
           deck_id?: string
           difficulty?: number
-          due_date?: string
+          due?: string
           id?: string
-          interval?: number
           lapses?: number
-          last_reviewed_at?: string | null
+          last_review?: string | null
           meaning?: string
           part_of_speech?: string
           reading?: string | null
-          repetitions?: number
+          reps?: number
+          scheduled_days?: number
           stability?: number
           state?: Database["public"]["Enums"]["card_state"]
           updated_at?: string

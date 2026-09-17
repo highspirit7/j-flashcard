@@ -81,6 +81,8 @@ Supabase가 관리하는 `auth.users`를 사용자 계정의 기준으로 사용
 
 `cards`에는 현재 카드 상태, 기억 안정성(`stability`), 난이도(`difficulty`), 다음 복습일을 저장합니다. `review_logs`에는 `id`, `card_id`, `user_id`, `rating`, `reviewed_at`, `state_before`, `state_after`, `scheduled_days`, `due_at_after`를 저장합니다.
 
+덱 또는 카드를 삭제해도 `review_logs`는 삭제되지 않고 보존됩니다. 이를 위해 `review_logs.card_id`는 `on delete set null`로 설정되어 있어, 참조하던 카드가 삭제되면 `card_id`만 `null`이 되고 로그 행 자체는 남습니다.
+
 ```mermaid
 erDiagram
   AUTH_USERS ||--o{ DECKS : owns

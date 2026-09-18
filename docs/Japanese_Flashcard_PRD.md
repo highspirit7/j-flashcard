@@ -79,61 +79,25 @@
 
 ---
 
-## 4. 데이터 모델 설계 (Data Schema)
+## 4. 데이터 모델 개요 (Data Model Overview)
 
-```typescript
-// 사용자 (User) 모델
-export interface User {
-  id: string; // 고유 ID
-  username: string; // 사용자명 (로그인 시 사용)
-  passwordHash: string; // 비밀번호 (해시 처리됨)
-  createdAt: string; // 생성일
-}
+J-Flashcard는 Supabase Auth와 다음 애플리케이션 데이터를 사용한다.
 
-// Anki 카드 평가 타입
-export type AnkiRating = "again" | "hard" | "good" | "easy";
+- **사용자:** Supabase `auth.users`에서 관리한다. 애플리케이션의 별도 사용자 테이블은 만들지 않는다.
+- **덱:** 사용자가 소유하는 단어 묶음이다.
+- **카드:** 덱에 포함되는 일본어 단어와 FSRS 학습 상태다.
+- **예문:** 카드에 연결되는 일본어 예문과 한국어 뜻이다. 예문 읽기는 선택값이다.
+- **복습 로그:** 카드 평가 결과의 변경 이력이다.
 
-// Anki 카드 학습 상태
-export type CardState = "new" | "learning" | "review" | "relearning";
+주요 관계는 다음과 같다.
 
-// 카드 (Card) 모델
-export interface Card {
-  id: string; // UUID 또는 Timestamp 기반 고유 ID
-  word: string; // 단어 (일본어 표기: 한자/히라가나/가타가나) (예: 食べる, あります, コンピューター)
-  reading?: string; // 후리가나 / 히라가나 읽기 (예: たべる)
-  meaning: string; // 한국어 뜻 (예: 먹다)
-  partOfSpeech: string; // 품사 (명사, 동사, 형용사, 부사, 조사, 조동사, 연결사, 감동사 등)
-  examples: Array<{
-    text: string; // 예문 (일본어) (예: 昼飯を食べる)
-    meaning: string; // 예문 뜻 (한글) (예: 점심을 먼다)
-    reading: string; // 예문 발음
-  }>; // 예문 배열 (여러 개 가능)
+- 한 사용자는 여러 덱을 소유한다.
+- 한 덱은 여러 카드를 가진다.
+- 한 카드는 여러 예문을 가진다.
+- 한 카드는 여러 복습 로그를 가진다.
+- 카드를 삭제해도 복습 로그는 보존한다.
 
-  // --- FSRS Scheduling Engine Fields ---
-  state: CardState; // 카드 상태 ('new' | 'learning' | 'review' | 'relearning')
-  stability: number; // 기억 안정성 (단위: 일)
-  difficulty: number; // 카드 난이도 (FSRS 척도)
-  interval: number; // 다음 복습까지의 간격 (단위: 일수 또는 분)
-  repetitions: number; // 연속 성공 횟수
-  lapses: number; // 복습 카드의 실패 횟수
-  dueDate: string; // 다음 복습 예정 일시 (ISO Date String)
-  lastReviewedAt?: string; // 마지막으로 학습한 일시
-
-  createdAt: string; // 생성일
-}
-
-// 덱 (Deck) 모델
-export interface Deck {
-  id: string; // 고유 ID
-  userId: string; // 소유자 ID (User.id)
-  title: string; // 덱 이름 (예: JLPT N5 필수 단어)
-  description?: string; // 덱 설명
-  category: string; // 카테고리 (예: 동사, 명사, 표현)
-  cards: Card[]; // 덱에 포함된 카드 리스트
-  createdAt: string;
-  updatedAt: string;
-}
-```
+카드와 예문은 덱 안에 중첩된 JSON 데이터가 아니라 별도 테이블로 관리한다. 구체적인 테이블, 컬럼, 타입, 필수 여부, 제약 조건, 접근 정책은 [데이터仕様書](DATA_SPECIFICATION.md)를 따른다.
 
 ---
 

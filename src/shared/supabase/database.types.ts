@@ -139,7 +139,6 @@ export type Database = {
       }
       decks: {
         Row: {
-          category: string | null
           created_at: string
           description: string | null
           id: string
@@ -148,7 +147,6 @@ export type Database = {
           user_id: string
         }
         Insert: {
-          category?: string | null
           created_at?: string
           description?: string | null
           id?: string
@@ -157,7 +155,6 @@ export type Database = {
           user_id: string
         }
         Update: {
-          category?: string | null
           created_at?: string
           description?: string | null
           id?: string

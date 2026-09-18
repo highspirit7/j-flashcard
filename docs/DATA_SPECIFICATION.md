@@ -89,7 +89,6 @@ new | learning | review | relearning
 | `user_id`     | `uuid`          | 불가 | 없음                | 소유자. `auth.users.id` 참조 |
 | `title`       | `text`          | 불가 | 없음                | 덱 이름                      |
 | `description` | `text`          | 가능 | 없음                | 덱 설명                      |
-| `category`    | `text`          | 가능 | 없음                | 덱 카테고리                  |
 | `created_at`  | `timestamptz`   | 불가 | `now()`             | 생성 시각                    |
 | `updated_at`  | `timestamptz`   | 불가 | `now()`             | 최종 수정 시각               |
 
@@ -100,8 +99,7 @@ new | learning | review | relearning
 입력 규칙:
 
 - `title`은 필수다.
-- `description`과 `category`는 선택이다.
-- 현재 migration에는 `category` 허용값을 제한하는 enum 또는 check constraint가 없다.
+- `description`은 선택이다.
 
 ### 5.2 `cards`
 

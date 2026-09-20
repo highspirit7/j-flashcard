@@ -93,7 +93,7 @@ erDiagram
 
 ## FSRS 평가 흐름
 
-목표 기억 유지율은 $0.9$로 고정합니다. 카드 평가 시 클라이언트는 Supabase Edge Function을 호출하고, Edge Function은 `ts-fsrs`로 일정을 계산한 뒤 카드 상태와 평가 이력을 함께 저장합니다.
+목표 기억 유지율은 $0.9$로 고정합니다. 카드 평가 시 클라이언트는 Supabase Edge Function을 호출하고, Edge Function은 `ts-fsrs`로 일정을 계산한 뒤 카드 상태 수정과 평가 이력 추가를 하나의 RPC 트랜잭션으로 실행합니다.
 
 ```mermaid
 sequenceDiagram
@@ -103,8 +103,8 @@ sequenceDiagram
 
   C->>E: 카드 ID와 평가 전송
   E->>E: ts-fsrs로 다음 일정 계산
-  E->>D: cards 상태 갱신
-  E->>D: review_logs 이력 추가
+  E->>D: RPC 호출: cards 상태 갱신 및 review_logs 이력 추가
+  D-->>E: 트랜잭션 결과 반환
   E-->>C: 확정된 카드 상태와 복습 일정 반환
 ```
 

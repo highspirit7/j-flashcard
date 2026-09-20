@@ -100,6 +100,8 @@ new | learning | review | relearning
 
 - `title`은 필수다.
 - `description`은 선택이다.
+- `title`과 `description`에는 최대 문자 수 제한이 없다.
+- 같은 사용자가 동일한 이름의 덱을 여러 개 생성할 수 있다.
 
 ### 5.2 `cards`
 
@@ -133,6 +135,7 @@ new | learning | review | relearning
 
 - `word`, `meaning`, `part_of_speech`, `deck_id`는 필수다.
 - `reading`은 선택이다.
+- `word`, `reading`, `meaning`, `part_of_speech`에는 최대 문자 수 제한이 없다.
 - 새 카드는 FSRS 기본값으로 생성한다.
 - 카드 내용 수정 시 FSRS 상태 컬럼은 변경하지 않는다.
 - 학습 평가에 따른 FSRS 상태 변경은 스케줄러 처리에서 수행한다.
@@ -162,6 +165,7 @@ new | learning | review | relearning
 - 예문 목록 자체는 선택이다.
 - 예문이 추가되면 `text`와 `meaning`은 필수다.
 - `reading`은 선택이다.
+- `text`, `reading`, `meaning`에는 최대 문자 수 제한이 없다.
 - 예문 표시 순서는 `sort_order`를 사용한다.
 
 ### 5.4 `review_logs`
@@ -189,6 +193,7 @@ new | learning | review | relearning
 변경 및 보존 규칙:
 
 - 복습 로그는 평가 처리 시 추가한다.
+- 카드 상태 수정과 복습 로그 추가는 하나의 RPC 트랜잭션으로 처리한다. 둘 중 하나라도 실패하면 전체 변경을 롤백한다.
 - 카드 삭제 시 `card_id`만 `null`로 변경하고 로그 행은 보존한다.
 - 덱 삭제는 카드 삭제로 cascade되지만 복습 로그는 보존한다.
 - 현재 RLS에는 insert와 delete 정책이 있고 update 정책은 없다.
